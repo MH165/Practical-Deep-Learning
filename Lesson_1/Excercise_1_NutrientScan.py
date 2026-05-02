@@ -15,7 +15,7 @@ else:
 
 
 
-path = Path(__file__).parent / 'Images'
+path = Path(__file__).parent / dataset/ 'Images'
 
 
 # ─────────────────────────────────────────────
