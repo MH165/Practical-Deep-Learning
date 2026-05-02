@@ -26,22 +26,22 @@ def search_images(keywords, max_images=200):
 # download_url(search_images('forest photos', max_images=1)[0], 'forest.jpg', show_progress=False)
 # Image.open('forest.jpg').to_thumb(256,256).show()
 
-search = 'glass can','plastic can', 'aluminium can', 'paper can'
-path = Path(__file__).parent / 'Can_Images'
+# search = 'glass can','plastic can', 'aluminium can', 'paper can'
+path = Path(__file__).parent / dataset/'Can_Images'
+# use search engine to download your own dataset
+# if not path.exists():
+#     for s in search:
+#         dest = path/s
+#         dest.mkdir(parents=True, exist_ok=True)
+#         download_images(dest, urls=search_images(f'{s} photo'))
+#         time.sleep(5)
+#         resize_images(path/s, max_size=400, dest=path/s)
 
-if not path.exists():
-    for s in search:
-        dest = path/s
-        dest.mkdir(parents=True, exist_ok=True)
-        download_images(dest, urls=search_images(f'{s} photo'))
-        time.sleep(5)
-        resize_images(path/s, max_size=400, dest=path/s)
-
-    failed = verify_images(get_image_files(path))
-    failed.map(Path.unlink)
-    print(f" Deleted {len(failed)}")
-else:
-    print("Images already downloaded, skipping download step.")
+#     failed = verify_images(get_image_files(path))
+#     failed.map(Path.unlink)
+#     print(f" Deleted {len(failed)}")
+# else:
+#     print("Images already downloaded, skipping download step.")
 
 
 can = DataBlock(
