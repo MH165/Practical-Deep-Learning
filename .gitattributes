@@ -1,1 +1,2 @@
 Lesson_1/dataset/Images.zip filter=lfs diff=lfs merge=lfs -text
+Lesson_2/dataset/Can_Images.zip.zip filter=lfs diff=lfs merge=lfs -text
